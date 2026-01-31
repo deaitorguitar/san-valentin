@@ -72,13 +72,9 @@ const SuccessModal = ({ isOpen }: SuccessModalProps) => {
 
         {/* Happy message */}
         <div className="space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">
-            ¡Sabía que dirías que sí!
+          <h2 className="text-5xl md:text-6xl font-bold text-primary animate-pulse-love">
+            &lt;3 :)
           </h2>
-          <p className="text-6xl animate-pulse-love">😊💕</p>
-          <p className="text-lg text-muted-foreground font-medium">
-            ¡Te quiero mucho!
-          </p>
         </div>
       </div>
     </div>
