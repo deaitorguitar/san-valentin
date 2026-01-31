@@ -2,7 +2,7 @@ import { useState } from "react";
 import FloatingHearts from "@/components/FloatingHearts";
 import ValentineButtons from "@/components/ValentineButtons";
 import SuccessModal from "@/components/SuccessModal";
-import catHeart from "@/assets/cat-heart.png";
+import catMain from "@/assets/cat-main.jpeg";
 import { Heart, Sparkles } from "lucide-react";
 
 const Index = () => {
@@ -39,9 +39,9 @@ const Index = () => {
           {/* Cat image */}
           <div className="mb-8 animate-pulse-love">
             <img
-              src={catHeart}
+              src={catMain}
               alt="Gatito adorable sosteniendo un corazón"
-              className="w-56 h-56 md:w-72 md:h-72 mx-auto object-contain drop-shadow-xl rounded-2xl"
+              className="w-56 h-56 md:w-72 md:h-72 mx-auto object-cover drop-shadow-xl rounded-2xl"
             />
           </div>
 
