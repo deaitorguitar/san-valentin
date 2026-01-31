@@ -57,7 +57,7 @@ const Index = () => {
         {/* Bottom decoration */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-2 text-muted-foreground/60">
           <Heart className="w-4 h-4 fill-current" />
-          <span className="text-sm font-medium">Hecho con amor</span>
+          <span className="text-sm font-medium">Hecho por guichu :p</span>
           <Heart className="w-4 h-4 fill-current" />
         </div>
       </main>
