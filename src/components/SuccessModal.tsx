@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
-import catHappy from "@/assets/cat-happy.png";
+import catYipee from "@/assets/cat-yipee.gif";
 
 interface SuccessModalProps {
   isOpen: boolean;
@@ -61,12 +61,12 @@ const SuccessModal = ({ isOpen }: SuccessModalProps) => {
           style={{ animationDelay: "0.6s" }}
         />
 
-        {/* Happy cat image */}
-        <div className="mb-6 animate-wiggle">
+        {/* Happy cat GIF */}
+        <div className="mb-6">
           <img
-            src={catHappy}
+            src={catYipee}
             alt="Gatito feliz celebrando"
-            className="w-48 h-48 md:w-56 md:h-56 mx-auto object-contain drop-shadow-lg"
+            className="w-48 h-48 md:w-56 md:h-56 mx-auto object-contain rounded-lg"
           />
         </div>
 
