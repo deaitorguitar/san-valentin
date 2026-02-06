@@ -12,8 +12,9 @@ const ValentineButtons = ({ onYesClick }: ValentineButtonsProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const yesScale = Math.min(1 + noAttempts * 0.15, 2.5);
-  const noScale = Math.max(1 - noAttempts * 0.1, 0.3);
-  const noOpacity = Math.max(1 - noAttempts * 0.1, 0.4);
+  const noScale = Math.max(1 - noAttempts * 0.12, 0.2);
+  const noOpacity = Math.max(1 - noAttempts * 0.15, 0);
+  const noHidden = noAttempts >= 7;
 
   const messages = [
     "No",
@@ -75,21 +76,23 @@ const ValentineButtons = ({ onYesClick }: ValentineButtonsProps) => {
       </Button>
 
       {/* No Button */}
-      <Button
-        onClick={handleNoClick}
-        onMouseEnter={handleNoHover}
-        onTouchStart={handleNoClick}
-        variant="outline"
-        className="gradient-button-no text-primary-foreground border-none font-semibold rounded-full 
-                   px-6 py-4 text-lg transition-all duration-200"
-        style={{
-          transform: `translate(${noPosition.x}px, ${noPosition.y}px) scale(${noScale})`,
-          opacity: noOpacity,
-          transition: "transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s ease",
-        }}
-      >
-        {currentMessage}
-      </Button>
+      {!noHidden && (
+        <Button
+          onClick={handleNoClick}
+          onMouseEnter={handleNoHover}
+          onTouchStart={handleNoClick}
+          variant="outline"
+          className="gradient-button-no text-primary-foreground border-none font-semibold rounded-full 
+                     px-6 py-4 text-lg transition-all duration-200"
+          style={{
+            transform: `translate(${noPosition.x}px, ${noPosition.y}px) scale(${noScale})`,
+            opacity: noOpacity,
+            transition: "transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s ease",
+          }}
+        >
+          {currentMessage}
+        </Button>
+      )}
     </div>
   );
 };
